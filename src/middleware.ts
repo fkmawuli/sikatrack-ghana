@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
+import NextAuth from "next-auth";
+import authConfig from "@/auth.config";
 import { can, findRequiredPermission } from "@/lib/rbac";
+
+// Built from the edge-safe config directly (not @/auth) so the Prisma-backed
+// Credentials provider never gets bundled into this Edge Function.
+const { auth } = NextAuth(authConfig);
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
