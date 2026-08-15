@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SikaTrack Ghana",
+  title: "KudiTrack",
   description: "Sales, stock and expenditure management for Ghanaian small businesses",
 };
 

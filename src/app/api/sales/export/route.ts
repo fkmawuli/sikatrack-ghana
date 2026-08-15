@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
     const canSeeCost = can(user.role, "products.manage") || can(user.role, "reports.financial");
 
     const workbook = new ExcelJS.Workbook();
-    workbook.creator = "SikaTrack Ghana";
+    workbook.creator = "KudiTrack";
     workbook.created = new Date();
 
     // ---- Sales sheet (one row per transaction) ----
@@ -142,7 +142,7 @@ export async function GET(req: NextRequest) {
       status: 200,
       headers: {
         "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        "Content-Disposition": `attachment; filename="sikatrack-sales-${dateStamp}.xlsx"`,
+        "Content-Disposition": `attachment; filename="kuditrack-sales-${dateStamp}.xlsx"`,
       },
     });
   } catch (err) {

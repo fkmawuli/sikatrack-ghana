@@ -5,7 +5,7 @@ export default function MobileHeader({ businessName }: { businessName: string })
         S
       </div>
       <div>
-        <p className="font-semibold text-sm leading-tight">SikaTrack Ghana</p>
+        <p className="font-semibold text-sm leading-tight">KudiTrack</p>
         <p className="text-[11px] text-white/70 truncate max-w-[220px]">{businessName}</p>
       </div>
     </header>

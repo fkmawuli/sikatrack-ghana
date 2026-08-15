@@ -26,7 +26,7 @@ export default function Sidebar({
           S
         </div>
         <div>
-          <p className="font-semibold leading-tight">SikaTrack Ghana</p>
+          <p className="font-semibold leading-tight">KudiTrack</p>
           <p className="text-xs text-white/60 truncate max-w-[150px]">{businessName}</p>
         </div>
       </div>

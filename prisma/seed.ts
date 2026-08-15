@@ -39,7 +39,7 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 9): Promise<T> {
 }
 
 async function main() {
-  console.log("Seeding SikaTrack Ghana demo data...");
+  console.log("Seeding KudiTrack demo data...");
 
   await withRetry(() => prisma.auditLog.deleteMany());
   await withRetry(() => prisma.reconciliation.deleteMany());
@@ -87,11 +87,11 @@ async function main() {
 
   const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 10);
   const demoUsers = [
-    { name: "Adjoa Mensah", email: "owner@sikatrack.demo", phone: "+233241000001", role: "OWNER" as const },
-    { name: "Kwabena Owusu", email: "manager@sikatrack.demo", phone: "+233241000002", role: "MANAGER" as const },
-    { name: "Ama Serwaa", email: "cashier@sikatrack.demo", phone: "+233241000003", role: "CASHIER" as const },
-    { name: "Yaw Boateng", email: "stockkeeper@sikatrack.demo", phone: "+233241000004", role: "STOCK_KEEPER" as const },
-    { name: "Efua Asante", email: "bookkeeper@sikatrack.demo", phone: "+233241000005", role: "BOOKKEEPER" as const },
+    { name: "Adjoa Mensah", email: "owner@kuditrack.demo", phone: "+233241000001", role: "OWNER" as const },
+    { name: "Kwabena Owusu", email: "manager@kuditrack.demo", phone: "+233241000002", role: "MANAGER" as const },
+    { name: "Ama Serwaa", email: "cashier@kuditrack.demo", phone: "+233241000003", role: "CASHIER" as const },
+    { name: "Yaw Boateng", email: "stockkeeper@kuditrack.demo", phone: "+233241000004", role: "STOCK_KEEPER" as const },
+    { name: "Efua Asante", email: "bookkeeper@kuditrack.demo", phone: "+233241000005", role: "BOOKKEEPER" as const },
   ];
   const [owner, manager, cashier] = await (async () => {
     const created = [];
@@ -397,11 +397,11 @@ async function main() {
   console.log("Seed complete.");
   console.log("");
   console.log("Demo accounts (all use password: " + DEMO_PASSWORD + ")");
-  console.log("  Owner/Administrator : owner@sikatrack.demo");
-  console.log("  Manager             : manager@sikatrack.demo");
-  console.log("  Cashier              : cashier@sikatrack.demo");
-  console.log("  Stock Keeper         : stockkeeper@sikatrack.demo");
-  console.log("  Bookkeeper           : bookkeeper@sikatrack.demo");
+  console.log("  Owner/Administrator : owner@kuditrack.demo");
+  console.log("  Manager             : manager@kuditrack.demo");
+  console.log("  Cashier              : cashier@kuditrack.demo");
+  console.log("  Stock Keeper         : stockkeeper@kuditrack.demo");
+  console.log("  Bookkeeper           : bookkeeper@kuditrack.demo");
 }
 
 main()

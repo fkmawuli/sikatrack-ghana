@@ -1,4 +1,4 @@
-// SikaTrack Ghana - Prisma schema (PostgreSQL / Supabase).
+// KudiTrack - Prisma schema (PostgreSQL / Supabase).
 // Money fields use Decimal(12,2) GHS. Quantity fields use Decimal(12,3) to allow
 // fractional units (kg, litre) as well as whole units (piece, pack).
 // SQLite (file:./dev.db) also works for local dev with zero setup, but native

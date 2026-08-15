@@ -1,4 +1,4 @@
-# SikaTrack Ghana
+# KudiTrack
 
 Sales, stock and expenditure management for small Ghanaian retail businesses (provision shops,
 cosmetics, clothing, pharmacy-style retail, spare parts). Built as a real, persistent, working
